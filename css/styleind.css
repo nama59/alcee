@@ -1,6 +1,16 @@
+:root{
+    --blnaco: #ffffff;
+    --grisClaro: #c8c5bc;
+    --negro: #212121;
+    --guinda: #6C132B;
+ }
 *{
     margin: 0;
     padding: 0;
+}
+
+h1{
+    padding-top: 5rem;
 }
 .header{
         background: rgb(32, 1, 1);
@@ -53,3 +63,189 @@
 .header nav ul li:hover > ul{
 display: block;
 }
+
+/*FOOTER*/
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #111;
+    color: var(--blnaco);
+}
+
+.contenedor-principal{
+    display: flex;
+}
+
+.contenedor-principal .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2{
+    padding-top: 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .contenido{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .contenido::before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+ 
+.box .contenido:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #ffffff;
+  top: -10px;
+}
+
+.derecha .contenido .redes{
+  margin: 25px 0 0 0;
+  
+  
+}
+
+.derecha .contenido .redes a{
+    padding: 0 10px; /*separacion de iconos de redes*/
+    color: var(--blnaco);
+}
+
+.derecha .contenido .redes a span{
+  height: 40px;
+  width: 40px;
+  margin-top: .5rem;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.derecha .contenido .redes a span:hover{
+    background: #4e0c0c;
+}
+
+.central .contenido .fa{
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.central .contenido .fa:hover{
+  background: #4e0c0c;
+}
+
+.central .contenido .texto-footer{
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.central .contenido .telefono{
+  margin: 20px 0;
+}
+
+.derecha form .texto-footer{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+
+.derecha .central .texto-footer{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+
+.derecha .central .texto-footer{
+  margin-top: 10px; 
+}
+
+.derecha form input, .derecha form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+
+.derecha form input:focus,
+.derecha form textarea:focus{
+outline-color: #3498db;
+}
+
+.derecha form input{
+  height: 35px;
+}
+.derecha form .btn-enviar{
+  margin-top: 10px;
+}
+
+.derecha form .btn-enviar button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #4e0c0c;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.derecha form .btn-enviar button:hover{
+  background: rgb(255, 255, 255);
+  color: #111;
+}
+
+.contenedor-final {
+  width: 100%;
+  background-color: #222222;
+}
+
+.politica a{
+    color: var(--blnaco);
+    text-decoration: none;
+}
+
+.final{
+   max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .contenedor-principal{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .contenedor-principal .box{
+    margin: 5px 0;
+  }
+}
+
+
