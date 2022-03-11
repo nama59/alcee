@@ -12,9 +12,36 @@
 h1{
     padding-top: 5rem;
 }
+/*Inicio de página */
+.principal-line{
+  background: rgb(53, 5, 5);
+  display: flex;
+}
+
+.principal-line ul{
+  list-style: none;
+  
+
+}
+
+.nav-top-menu-link {
+  text-decoration: none;
+  font-size: 15.5px;
+  color: var(--blnaco);
+  padding-right: 50px;
+}
+.contenido-top{
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+/*Barra de navegación*/
 .header{
         background: rgb(211, 206, 206);
-        height: 80px;
+        height: 100px;
         position:fixed;
         width: 100%;
 
@@ -63,10 +90,49 @@ h1{
 .header nav ul li:hover > ul{
 display: block;
 }
+.nav-toggle{
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+  display: none;
+  
+}
+@media (max-width: 768px) {
+  .nav-toggle{
+    display: block;
+    
+}
+.nav-menu_visible{
+left: 0;
+}
+
+.nav-toggle:focus:not(:focus-visible){
+outline: none;
+}
+
+.nav-menu{
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0px;
+  background-color: rgb(187, 92, 128);
+  position: fixed;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  padding: 10px 0;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  left: 100%;
+  transition: left 0.3s;    
+}
+}
 
 /*FOOTER*/
 footer{
-    position: fixed;
     bottom: 0px;
     width: 100%;
     background-color: #111;
